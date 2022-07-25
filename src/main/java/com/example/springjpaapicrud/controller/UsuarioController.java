@@ -26,10 +26,10 @@ public class UsuarioController {
         return usuarios;
     }
 
-//    @DeleteMapping("/{id}")
-//    public void deletar(@PathVariable Long id){
-//        usuarioRepository.deleteById(id);
-//    }
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable Long id){
+        usuarioRepository.deleteById(id);
+    }
 
     @PutMapping
     public void atualizar (@RequestBody Usuario usuario){
