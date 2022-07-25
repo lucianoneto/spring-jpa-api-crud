@@ -27,12 +27,11 @@ public class UsuarioController {
         return usuarios;
     }
 
-    @DeleteMapping("/id")
+    @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id){
         usuarioRepository.deleteById(id);
     }
 
-    @Transactional
     @PutMapping
     public void atualizar (@RequestBody Usuario usuario){
         usuarioRepository.save(usuario);
